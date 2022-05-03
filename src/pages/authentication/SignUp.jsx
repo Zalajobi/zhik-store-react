@@ -8,6 +8,7 @@ import {Link, useNavigate} from "react-router-dom";
 import '../../assets/css/login-signup.css'
 import {handlePostRequest} from "../../helper/requests";
 import {BASEURL} from "../../helper/constants";
+import {errorDarkTopCenter, successDarkTopCenter} from "../../components/common/beautify/Alerts";
 
 
 const SignUp = (props) => {
@@ -16,11 +17,14 @@ const SignUp = (props) => {
 
     const handleSubmit = async (event) => {
 		event.preventDefault();
+        console.log(user)
 		const response = await handlePostRequest(user, `${BASEURL}user/signup`)
-		if(response.status === 200){
-            navigate("/")
-		}else{
-			// alert(response.data)
+		if(response.status === 200) {
+            successDarkTopCenter(response.data)
+            setTimeout(() => {navigate("/login")}, 5000)
+		} else {
+            errorDarkTopCenter('User with username, phone or email already exists')
+            setTimeout(() => {navigate("/signup")}, 5000)
 		}
 	};
 

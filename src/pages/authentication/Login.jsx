@@ -8,7 +8,7 @@ import LonginBackground from "../../assets/images/bg-sign-in-basic.jpeg"
 import {handlePostRequest} from "../../helper/requests";
 import {BASEURL} from "../../helper/constants";
 import { FaUserAlt } from "react-icons/fa";
-import {successColoredTopCenter, successDarkTopCenter} from "../../components/common/beautify/Alerts";
+import { successDarkTopCenter } from "../../components/common/beautify/Alerts";
 
 const Login = (props) => {
     const [user, setUser] = React.useState(props.user)

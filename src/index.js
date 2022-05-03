@@ -8,13 +8,14 @@ import './index.css';
 import './assets/vendor/animate/animate.css'
 import './assets/vendor/bootstrap/css/bootstrap.min.css'
 
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store';
 import Login from "./pages/authentication/Login";
 import SignUp from "./pages/authentication/SignUp";
 
 import 'react-toastify/dist/ReactToastify.css';
+import HomePage from "./pages";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +23,7 @@ root.render(
 		<ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<App />}/>
+				<Route path="/" element={<HomePage />}/>
 				<Route path="/login" element={<Login/>}/>
 				<Route path="/signup" element={<SignUp/>}/>
 			</Routes>
