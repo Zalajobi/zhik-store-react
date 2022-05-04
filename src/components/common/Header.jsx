@@ -1,6 +1,7 @@
 import React from 'react'
-import '../../assets/css/common/header.css'
 import {Link} from "react-router-dom";
+
+import '../../assets/css/common/header.css'
 
 const Header = (props) => {
 	return (
@@ -24,7 +25,7 @@ const Header = (props) => {
 
 						<input type="checkbox" name="" className="navbar__toggler__input" id="navbarToggler"/>
 							<ul className="navbar__links">
-								<li><Link to="/">Profile</Link></li>
+								<li><Link to="/profile">Profile</Link></li>
 								<li><Link to="/">Product</Link>
 									<ul className="navbar__sublinks">
 										<li><Link to="/">linkedin</Link></li>

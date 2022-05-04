@@ -16,6 +16,7 @@ import SignUp from "./pages/authentication/SignUp";
 
 import 'react-toastify/dist/ReactToastify.css';
 import HomePage from "./pages";
+import ProfilePage from "./pages/user/UserProfiilePage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
 				<Route path="/" element={<HomePage />}/>
 				<Route path="/login" element={<Login/>}/>
 				<Route path="/signup" element={<SignUp/>}/>
+				<Route path="/profile" element={<ProfilePage/>}/>
 			</Routes>
 		</BrowserRouter>
 	</Provider>
