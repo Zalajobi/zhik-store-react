@@ -18,6 +18,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import HomePage from "./pages";
 import ProfilePage from "./pages/user/UserProfiilePage";
 import ErrorPage from "./pages/ErrorPage";
+import ResetPassword from "./pages/authentication/ResetPassord";
+import ChangePassword from "./pages/authentication/ChangePassword";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +31,8 @@ root.render(
 				<Route path="/login" element={<Login/>}/>
 				<Route path="/signup" element={<SignUp/>}/>
 				<Route path="/profile" element={<ProfilePage/>}/>
+				<Route path="/user/reset/password" element={<ResetPassword/>}/>
+				<Route path="/user/edit/password" element={<ChangePassword/>}/>
 				<Route path="*" element={<ErrorPage/>}/>
 			</Routes>
 		</BrowserRouter>
